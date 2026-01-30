@@ -71,12 +71,23 @@
             position: relative;
         }
         .id-guide:hover::after {
-            content: "원하는 채널 메인 > 채널 설명 더보기 > 채널 공유 > 채널 ID 복사";
-            position: absolute; left: 0; top: 20px;
-            background: #333; color: #fff; padding: 8px 12px;
-            border-radius: 6px; white-space: nowrap; z-index: 100;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+    content: "원하는 채널 메인 > 채널 설명 더보기 > 채널 공유 > 채널 ID 복사";
+    position: absolute;
+    left: 0;
+    top: 25px; /* 위치를 조금 더 아래로 조정 */
+    background: #333;
+    color: #fff;
+    padding: 10px 12px; /* 패딩을 약간 늘려 여유를 줌 */
+    border-radius: 6px;
+    
+    /* ✨ 핵심 수정 부분 ✨ */
+    white-space: normal; /* 텍스트가 길어지면 자동으로 줄바꿈 */
+    max-width: 240px;   /* 사이드바 폭을 넘지 않도록 최대 너비 설정 */
+    line-height: 1.5;   /* 줄 간격을 넓혀 가독성 확보 */
+    
+    z-index: 1000; /* 다른 요소보다 확실히 위에 오도록 설정 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* 그림자를 진하게 해서 더 잘 보이게 함 */
+}
 
         .input-group { width: 100%; margin-bottom: 25px; box-sizing: border-box; }
         
